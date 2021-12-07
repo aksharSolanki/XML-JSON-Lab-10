@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE phones>
+<phones>
+    <phone>
+        <id>1</id>
+        <brand>Apple</brand>
+        <model>iPhone 13</model>
+        <os>iOS</os>
+        <price crn="CAD">1099</price>
+    </phone>
+    <phone>
+        <id>2</id>
+        <brand>Samsung</brand>
+        <model>Galaxy Z Flip 3</model>
+        <os>Android OS 11-R</os>
+        <price crn="CAD">1299</price>
+    </phone>
+    <phone>
+        <id>3</id>
+        <brand>Huawei</brand>
+        <model>P40 Pro</model>
+        <os>HarmonyOS</os>
+        <price crn="CAD">1499</price>
+    </phone>
+    <phone>
+        <id>4</id>
+        <brand>Sony</brand>
+        <model>Xperia PRO-I</model>
+        <os>Android 11 OS</os>
+        <price crn="CAD">1799</price>
+    </phone>
+    <phone>
+        <id>5</id>
+        <brand>LG</brand>
+        <model>K32</model>
+        <os>Android 11 OS</os>
+        <price crn="CAD">789</price>
+    </phone>
+</phones>

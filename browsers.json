@@ -1,0 +1,44 @@
+{
+    "browsers": [
+        {
+            "id": 1,
+            "name": "Google Chrome",
+            "parent": "Alphabet",
+            "revenue" : 65.12,
+            "scale" : "billion",
+            "marketShare" : 64.06
+        },
+        {
+            "id": 2,
+            "name": "Safari",
+            "parent": "Apple",
+            "revenue" : 31.09,
+            "scale" : "billion",
+            "marketShare" : 19.22
+        },
+        {
+            "id": 3,
+            "name": "Edge",
+            "parent": "Microsoft",
+            "revenue" : 28.16,
+            "scale" : "billion",
+            "marketShare" : 4.19
+        },
+        {
+            "id": 4,
+            "name": "Firefox",
+            "parent": "Mozilla",
+            "revenue" : 17.81,
+            "scale" : "billion",
+            "marketShare" : 3.91
+        }
+        ,{
+            "id": 5,
+            "name": "Opera",
+            "parent": "Kunlun",
+            "revenue" : 65.12,
+            "scale" : "billion",
+            "marketShare" : 64.06
+        }
+    ]
+}
