@@ -101,11 +101,11 @@
                 output += "<th>Price</th>"
             output += "</tr>";
             $(xmlFile).find("phones phone").each(function(index) {
-                output += "<td>" + $(xmlFile).find("phone[index] id").text() + "</td>";
-                output += "<td>" + $(xmlFile).find("phone[index] brand").text() + "</td>";
-                output += "<td>" + $(xmlFile).find("phone[index] model").text() + "</td>";
-                output += "<td>" + $(xmlFile).find("phone[index] os").text() + "</td>";
-                output += "<td>" + $(xmlFile).find("phone[index] price").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone id").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone brand").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone model").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone os").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone price").text() + "</td>";
             })
             document.getElementById('phonesTable').innerHTML = output;
         }
