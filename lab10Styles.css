@@ -22,6 +22,7 @@ header {
     padding: 10px;
     border: 1px solid grey;
     width: 46%;
+    margin-left: 5px;
 }
 #browsers {
     flex: 0 0 auto;
@@ -29,4 +30,31 @@ header {
     border: 1px solid grey;
     width: 46%;
     margin-left: 5px;
+}
+button:hover {
+    color: white;
+    background-color: deepskyblue;
+}
+button {
+    font-size: 0.9em;
+    color: blue;
+    background-color: cornsilk;
+    padding: 5px;
+    width: 30%;
+    border-radius: 7px;
+    margin-left: 35%;
+}
+#phones:hover {
+    color: white;
+    border: 1px solid blue;
+    background-color:turquoise;
+    font-size: 1.1em;
+    width: 47%;
+}
+#browsers:hover {
+    color: white;
+    border: 1px solid blue;
+    background-color:turquoise;
+    font-size: 1.1em;
+    width: 47%;
 }
