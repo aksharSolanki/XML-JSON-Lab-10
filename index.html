@@ -100,18 +100,14 @@
                 output += "<th>OS</th>";
                 output += "<th>Price</th>"
             output += "</tr>";
-            $(xmlFile).find("phones phone").each(function(index) {
-                var specs = $(xmlFile).find("phone").children();
-                for(i = 0; i < specs.length; i++) {
-                    output += "<td>" + $("specs").find("id").text() + "</td>";
-                }
-                // output += "<td>" + $(xmlFile).find("phone id").text() + "</td>";
-                // output += "<td>" + $(xmlFile).find("phone brand").text() + "</td>";
-                // output += "<td>" + $(xmlFile).find("phone model").text() + "</td>";
-                // output += "<td>" + $(xmlFile).find("phone os").text() + "</td>";
-                // output += "<td>" + $(xmlFile).find("phone price").text() + "</td>";
+            $(xmlFile).find("phone").each(function() {
+                output += "<td>" + $(this).find("id").text() + "</td>";
+                output += "<td>" + $(this).find("brand").text() + "</td>";
+                output += "<td>" + $(this).find("model").text() + "</td>";
+                output += "<td>" + $(this).find("os").text() + "</td>";
+                output += "<td>" + $(this).find("price").text() + "</td>";
             })
-            document.getElementById('phonesTable').innerHTML = output;
+            document.getElementById('phonesTable').innerHTML += output;
         }
         </script>
     </body>
