@@ -31,8 +31,7 @@
                         All you have to do is press the Get Browsers button to view them.<br>
                     </article><br>
                     <button id="btnBrowsers" onclick="GetBrowsers()">Get Browsers</button>
-                    <table id="phonesTable"></table>
-                    <div id="test"></div>
+                    <table id="browsersTable"></table>
                 </div>
             </div>
         </main>
@@ -55,7 +54,26 @@
                 });
             }
         function DisplayData(jsonFile) {
-            document.getElementById('test').innerHTML = jsonFile.browsers[0].name;
+            var output = "";
+            output += "<tr>";
+                output += "<th>ID</th>";
+                output += "<th>Name</th>";
+                output += "<th>Parent</th>";
+                output += "<th>Revenue</th>";
+                output += "<th>Scale</th>";
+                output += "<th>Market Share</th>";
+            output += "</tr>";
+            $(jsonFile.browsers).each(function() {
+                output += "<tr>";
+                    output += "<td>" + jsonFile.browsers.id + "</td>";
+                    output += "<td>" + jsonFile.browsers.name + "</td>";
+                    output += "<td>" + jsonFile.browsers.parent + "</td>";
+                    output += "<td>" + jsonFile.browsers.revenue + "</td>";
+                    output += "<td>" + jsonFile.browsers.scale + "</td>";
+                    output += "<td>" + jsonFile.browsers.marketShare + "</td>";
+                output += "</tr>";
+            })
+            document.getElementById('browsersTable').innerHTML += output;
         }
         </script>
     </body>
