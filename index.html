@@ -46,8 +46,8 @@
                     type: 'GET',
                     datatype: 'json',
                     success: function(data) {
-                        var jsonFile = data.json();
-                        DisplayData(jsonFile);
+                        //var jsonFile = data.json();
+                        DisplayData(data);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         alert(textStatus);
