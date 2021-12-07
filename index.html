@@ -20,8 +20,8 @@
                         Note: It handles the request and retrieval using jQuery call<br>
                         All you have to do is press the Get Phones button to view them.<br>
                     </article><br>
-                    <button id="btnPhones" onclick="">Get Phones</button>
-                   <table id="phonesTable"></table>
+                    <button id="btnPhones" onclick="">Get Phones</button><br />
+                   <table id="phonesTable" border="1px solid blue"></table>
                 </div>
                 <div id="browsers">
                     <article>
@@ -30,8 +30,8 @@
                         Note: It handles the request and retrieval using jQuery call<br>
                         All you have to do is press the Get Browsers button to view them.<br>
                     </article><br>
-                    <button id="btnBrowsers" onclick="GetBrowsers()">Get Browsers</button>
-                    <table id="browsersTable"></table>
+                    <button id="btnBrowsers" onclick="GetBrowsers()">Get Browsers</button><br>
+                    <table id="browsersTable" border="1px solid blue"></table>
                 </div>
             </div>
         </main>
@@ -39,6 +39,7 @@
 
         </footer>
         <script type="text/javascript">
+        //FUNCTION TO GET JSON OBJECTS
         function GetBrowsers() {
                 $.ajax({
                     url: 'browsers.json',
@@ -74,6 +75,40 @@
                 output += "</tr>";
             })
             document.getElementById('browsersTable').innerHTML += output;
+        }
+        
+        //FUNCTION TO GET XML OBJECTS
+        function GetPhones() {
+            $.ajax({
+                url : 'phones.xml',
+                type: 'GET',
+                datatype: 'xml',
+                success: function(data, status, request) {
+                    DisplayPhones(request.responseXML);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert(textStatus);
+                }
+            });
+        }
+        function DisplayPhones(xmlFile) {
+            var output = "";
+            output += "<tr>";
+                output += "<th>ID</th>";
+                output += "<th>Name</th>";
+                output += "<th>Parent</th>";
+                output += "<th>Revenue</th>";
+                output += "<th>Scale</th>";
+                output += "<th>Market Share</th>";
+            output += "</tr>";
+            $(xmlFile).find("phones phone").each(function(index) {
+                output += "<td>" + $(xmlFile).find("phone id").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone brand").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone model").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone os").text() + "</td>";
+                output += "<td>" + $(xmlFile).find("phone price").text() + "</td>";
+            })
+            document.getElementById('phonesTable').innerHTML = output;
         }
         </script>
     </body>
