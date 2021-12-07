@@ -63,14 +63,14 @@
                 output += "<th>Scale</th>";
                 output += "<th>Market Share</th>";
             output += "</tr>";
-            $(jsonFile.browsers).each(function() {
+            $(jsonFile.browsers).each(function(index) {
                 output += "<tr>";
-                    output += "<td>" + jsonFile.browsers.id + "</td>";
-                    output += "<td>" + jsonFile.browsers.name + "</td>";
-                    output += "<td>" + jsonFile.browsers.parent + "</td>";
-                    output += "<td>" + jsonFile.browsers.revenue + "</td>";
-                    output += "<td>" + jsonFile.browsers.scale + "</td>";
-                    output += "<td>" + jsonFile.browsers.marketShare + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].id + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].name + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].parent + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].revenue + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].scale + "</td>";
+                    output += "<td>" + jsonFile.browsers[index].marketShare + "</td>";
                 output += "</tr>";
             })
             document.getElementById('browsersTable').innerHTML += output;
