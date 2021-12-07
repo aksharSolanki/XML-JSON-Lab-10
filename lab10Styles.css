@@ -58,3 +58,8 @@ button {
     font-size: 1.1em;
     width: 47%;
 }
+table {
+    background-color: lavender;
+    margin-top: 5%;
+    color: blue;
+}
