@@ -47,15 +47,15 @@
                     datatype: 'json',
                     success: function(data) {
                         var jsonFile = JSON.parse(data);
-                        DisplayData(json);
+                        DisplayData(jsonFile);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         alert(textStatus);
                     }
                 });
             }
-        function DisplayData(json) {
-            document.getElementById('test').innerHTML = json.browsers[0].name;
+        function DisplayData(jsonFile) {
+            document.getElementById('test').innerHTML = jsonFile.browsers[0].name;
         }
         </script>
     </body>
